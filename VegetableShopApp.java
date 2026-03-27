@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class VegetableShopApp {
 
-    /* Vegetable class */
+    
     static class Vegetable {
         private String name;
         private double pricePerKg;
@@ -36,7 +36,6 @@ public class VegetableShopApp {
         }
     }
 
-    /* VegetableShop class */
     static class VegetableShop {
         private Map<String, Vegetable> inventory = new HashMap<>();
 
@@ -70,7 +69,6 @@ public class VegetableShopApp {
         }
     }
 
-    /* Main method for user interaction */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         VegetableShop shop = new VegetableShop();
@@ -89,10 +87,8 @@ public class VegetableShopApp {
             shop.addVegetable(new Vegetable(name, price));
         }
 
-        // Display initial inventory
         shop.displayInventory();
 
-        // Demo: update price
         System.out.print("Do you want to update a vegetable price(yes/no): ");
         String choice = sc.nextLine();
         if (choice.equalsIgnoreCase("yes")) {
@@ -109,7 +105,6 @@ public class VegetableShopApp {
             }
         }
 
-        // Display final inventory
         shop.displayInventory();
         System.out.println("Total vegetables in shop: " + shop.getTotalVegetables());
 
