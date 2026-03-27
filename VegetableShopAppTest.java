@@ -24,7 +24,7 @@ class VegetableShopAppTest {
     void testAddAndGetVegetable() {
         assertEquals(tomato, shop.getVegetable("Tomato"));
         assertEquals(potato, shop.getVegetable("Potato"));
-        assertNull(shop.getVegetable("Onion")); // Not added
+        assertNull(shop.getVegetable("Onion")); 
     }
 
     @Test
@@ -48,7 +48,7 @@ class VegetableShopAppTest {
 
     @Test
     void testDisplayInventoryNotEmpty() {
-        // This just ensures displayInventory does not throw exception
+    
         assertDoesNotThrow(() -> shop.displayInventory());
     }
 
